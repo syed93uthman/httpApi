@@ -9,7 +9,6 @@ app.get('/flights', function (req, res) {
     console.log(data);
 
     res.send(data);
-    //res.end();
 })
 
 app.get('/flight/:flightId/info', function (req, res) {
@@ -26,7 +25,6 @@ app.get('/flight/:flightId/info', function (req, res) {
     })
 
     if (success) {
-        delete flight.flightId;
         console.log(flight);
         res.send(flight);
     }
@@ -35,7 +33,6 @@ app.get('/flight/:flightId/info', function (req, res) {
         res.send("Flight not found");
     }
 
-    //res.end();
 })
 
 
