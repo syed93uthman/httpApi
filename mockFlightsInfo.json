@@ -1,0 +1,17 @@
+{
+    "FlightNumber": 2,
+    "flights": [
+        {
+            "flightId": "SA3-1",
+            "flightNumber": "SA3",
+            "lat": "999",
+            "long": "888"
+        },
+        {
+            "flightId": "SA3-2",
+            "flightNumber": "SA3",
+            "lat": "123",
+            "long": "321"
+        }
+    ]
+}
