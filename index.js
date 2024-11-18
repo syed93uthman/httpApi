@@ -5,9 +5,9 @@ const flightsInfo = require('./mockFlightsInfo.json');
 app.get('/flights', function (req, res) {
     var data = flightsInfo;
     
-    data.flights = data.flights.map(flight => flight.flightId);
+    //data.flights = data.flights.map(flight => flight.flightId);
     console.log(data);
-
+    
     res.send(data);
 })
 
