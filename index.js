@@ -3,12 +3,16 @@ var app = express();
 const flightsInfo = require('./mockFlightsInfo.json');
 
 app.get('/flights', function (req, res) {
-    var data = flightsInfo;
+    const flightIds = flightsInfo.flights.map(flight => flight.flightId);
     
-    //data.flights = data.flights.map(flight => flight.flightId);
-    console.log(data);
+    const responseData = {
+        FlightNumber: flightsInfo.FlightNumber,
+        flights: flightIds
+    };
     
-    res.send(data);
+    console.log(responseData);
+    
+    res.send(responseData);
 })
 
 app.get('/flight/:flightId/info', function (req, res) {
